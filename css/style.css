@@ -17,7 +17,8 @@ html {
   height: 14em;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+  /* font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; */
+  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   margin: 8em auto;
   color: #222;
