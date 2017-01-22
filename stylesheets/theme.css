@@ -201,14 +201,29 @@ nav li.links.current-menu-item a > span {
     border-top: 1px solid #e5e5e5; }
 .personalDev .title {
     font-weight: bold; }
+.workExperience {
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 40px;}
+.workExperience li {
+    border-top: 1px solid #e5e5e5; }
+.workExperience .duty {
+    border-top: none; }    
+.workExperience .title {
+    font-weight: bold;
+    border-bottom: 40px; }
+.workExperience .time {
+    float: right;
+}
+
 .skills {
     font-size: 13px;
     color: #999999; }
 .skills li {
-    border-top: 1px solid #e5e5e5; }
+    border-top: none; }
 .skills .skill {
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 12px; }    
 .skills .rating span.filled {
     background: url('../images/skill-rating.png') no-repeat 0px 0px #1B9FB8; }
 .skills .rating span.empty {
