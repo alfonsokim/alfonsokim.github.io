@@ -8,9 +8,9 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Responsive</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<title>Alfonso Kim</title>
+	<meta name="description" content="Alfonso Kim's personal homepage">
+	<meta name="author" content="Alfonso Kim">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -50,10 +50,6 @@
 			/* === contact form validation === */
 			$('#fc-contact-btn').click(function(e) {
 				e.preventDefault();
-				$('#fc-contact-form').submit();
-			});
-			
-			$('#fc-contact-form').submit(function(e) {
 				var isValid = true;
 				
 				if ($('#uname').val() == '') {
@@ -89,22 +85,11 @@
 				}
 				
 				if (isValid) {
-					$.post("form-handler.php",
-					{uname:$('#uname').val(), uemail:$('#uemail').val(), umessage:$('#umessage').val()},
-					function(data) {
-						if (data.status == "success") {
-							$('#fc-contact-form .alert-box').removeClass('error');
-							$('#fc-contact-form .alert-box').addClass('success');
-							$('#fc-contact-form .alert-box span').text("Form has been successfully submitted.");
-							$("#fc-contact-form .alert-box").slideDown(500);
-						}
-						else {
-							$('#fc-contact-form .alert-box').removeClass('success');
-							$('#fc-contact-form .alert-box').addClass('error');
-							$('#fc-contact-form .alert-box span').text("An error occurred while submitting the form. Please try again.");
-							$("#fc-contact-form .alert-box").slideDown(500);
-						}
-					}, "json");
+					$('#fc-contact-form').submit();
+					$('#fc-contact-form .alert-box').removeClass('error');
+					$('#fc-contact-form .alert-box').addClass('success');
+					$('#fc-contact-form .alert-box span').text("Thanks!, will reply soon.");
+					$("#fc-contact-form .alert-box").slideDown(500);					
 				}
 				
 				return false;
@@ -128,48 +113,54 @@
             <ul>
                 <li class="profile"><a href="index.html"><span><span>Profile</span></span></a></li>
                 <li class="resume"><a href="resume.html"><span><span>Resume</span></span></a></li>
-                <li class="portfolio"><a href="portfolio.html"><span><span>Portfolio</span></span></a></li>
-                <li class="blog"><a href="blog.html"><span><span>Blog</span></span></a></li>
+                <!-- <li class="portfolio"><a href="portfolio.html"><span><span>Portfolio</span></span></a></li> -->
+                <!-- <li class="blog"><a href="blog.html"><span><span>Blog</span></span></a></li> -->
                 <li class="contact current-menu-item"><a href="contact.html"><span><span>Contact</span></span></a></li>
-            </ul>
+            </ul>                
         </nav>
         <div class="content">
             <div class="info">
                 <div class="head">
-                    <img src="images/profile-image.jpg" alt="" />
+                    <img src="images/profile-image.png" alt="" />
                     <div class="name">
-                        <p class="first">Johnatan</p>
-                        <p class="last">Doe</p>
-                        <p class="title">Designer &amp; developer</p>
+                        <p class="first">Alfonso</p>
+                        <p class="last">Kim</p>
+                        <p class="title">Performance &amp; scalability engineer</p>
                     </div>
                 </div>
             </div><!-- /profileInfo -->
 
             <div class="topAddress">
                 <address>
+                    <!--
                     1111-A Nowhere Lane<br>
                     Outta Sight, State 90378, USA
                     <br>
+                    -->
+                    <a href="mailto:hexllxo@alxfoxnsxo.kxixm" onmouseover="this.href=this.href.replace(/x/g,'');">e-mail address</a>
+                    <br>
+                    <!--
                     <a href="mailto:johnathandoe@gmail.com">johnathandoe@gmail.com</a>
-                    <br>
                     <a href="#">+0(31)6 89764536</a>
-                    <br>
+                    <br> 
+                    -->
+                    Mexico City
 				</address>
                 <div class="social">
-                    <a href="#" target="_blank"><img src="images/social_icons/dribbble.png" alt="" /></a>
-                    <a href="#" target="_blank"><img src="images/social_icons/flickr.png" alt="" /></a>
-                    <a href="https://www.facebook.com/ThemeBakers" target="_blank"><img src="images/social_icons/facebook.png" alt="" /></a>
-                    <a href="https://twitter.com/ThemeBakers" target="_blank"><img src="images/social_icons/twitter.png" alt="" /></a>
+                    <a href="https://github.com/alfonsokim/" target="_blank"><img src="images/social_icons/github_20.png" alt="GitHub" /></a>
+                    <a href="https://twitter.com/alfonsokim/" target="_blank"><img src="images/social_icons/twitter.png" alt="Twitter" /></a>
+                    <a href="http://mx.linkedin.com/in/alfonsokim/" target="_blank"><img src="images/social_icons/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="http://blog.alfonso.kim/" target="_blank"><img src="images/social_icons/tumblr_20.png" alt="Tumblr" /></a>
                 </div>
             </div><!-- /topAddress -->
 
             <br class="clear" />
             <div class="innerContainer">
                 <div class="desc">
-                	<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Melbourne,+Victoria,+Australia&amp;aq=0&amp;oq=melbou&amp;sll=37.287165,-80.271606&amp;sspn=3.902347,7.13562&amp;ie=UTF8&amp;hq=&amp;hnear=Melbourne+Victoria,+Australia&amp;ll=-37.813611,144.963056&amp;spn=0.058315,0.111494&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3763.3981080725084!2d-99.1567427!3d19.3951976!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1485057423195" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <h4>Ask me anything.</h4>
-                <form id="fc-contact-form">
+                <form id="fc-contact-form" action="https://formspree.io/hello@alfonso.kim" method="POST">
                 	<div class="alert-box success" style="display:none;"><span></span><a class="close-btn" href="#"></a></div>
                     <label for="uname">Your name</label>
                     <input type="text" name="uname" id="uname">
@@ -181,19 +172,16 @@
                     <textarea name="umessage" id="umessage"></textarea>
                     <p class="error umessage-error"></p>
                     <br>
-                    <input type="submit" class="submit" name="submit" id="fc-contact-btn" value="Submit">
+                    <input type="submit" class="submit" name="submit" id="fc-contact-btn" value="Submit" />
                 </form>
                 <div class="sidebar hidden">
-                    <div class="widget twitter-updates">
-                        <h6 class="widget-title">Latest tweets</h6>
-                    </div>
                 </div><!-- /sidebar -->
             </div><!-- /innerContainer -->
 
         </div><!-- /content -->
 
         <footer>
-            <span>Copyright &copy;2012 Johnaton Does.</span>
+            <span>Copyright &copy;2017 Alfonso Kim.</span>
         </footer>
 
 	</div><!-- /wrapper -->
