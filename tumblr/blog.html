@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="http://static.tumblr.com/o2ktcze/p1qokise2/base.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/o2ktcze/bhMokise2/layout.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/o2ktcze/ws3okise2/prettyphoto.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/o2ktcze/sHTokise3/theme.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="http://alfonso.kim/images/favicon.ico">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:IfGoogleWebFont}
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+    {/block:IfGoogleWebFont}
+
+    <script type="text/javascript" src="http://static.tumblr.com/o2ktcze/7afokismf/jquery-1.11.1.min.js" async="yes"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/o2ktcze/6ruokisme/jquery.easing.1.3.js" async="yes"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/o2ktcze/G5cokismf/tabs.js" async="yes"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/o2ktcze/bKDokismd/biopic-functions.js" async="yes"></script>
+    <script type="text/javascript" src="http://alfonso.kim/javascripts/scripts.js" async="yes"></script>
+
+<script>
+( function($) {
+$(document).ready(function () {
+  
+    "use strict";
+    
+    /* === Pretty Photo === */
+    /*$("a[rel^='prettyPhoto']").prettyPhoto(); */
+    
+    /* === Fit Videos === */
+    /*$(".scale-video").fitVids(); */
+    
+    /* === Portfolio Filter Menu === */
+    $('ul.filter li a').click(function(e) {
+        e.preventDefault();
+        
+        $('ul.filter li.active').removeClass('active');
+        $(this).parent().addClass('active');
+        
+        var filterVal = $(this).text().toLowerCase().replace(new RegExp(" ", "g"), "-");
+        
+        if(filterVal == 'all') {
+            $('.work').removeClass('item-hidden');
+            $('.work a').attr('rel', 'prettyPhoto[biopic_works_gal]');
+        }
+        else {
+            $('.work').each(function(index, element) {
+                if(!$(this).hasClass(filterVal)) {
+                    $(this).addClass('item-hidden');
+                    $('a', this).attr('rel', '');
+                }
+                else {
+                    $(this).removeClass('item-hidden');
+                    $('a', this).attr('rel', 'prettyPhoto[biopic_works_gal]');
+                }
+            });
+        }
+    });
+    
+    /* === Accordion === */
+    var accordionTabs = $('.accordion > .atab');
+    $('.accordion > .atitle > a').click(function(e) {
+        e.preventDefault();
+        
+        var currenttab = $(this);
+        var targetTab =  currenttab.parent().next();
+        
+        // if same tab clicked then close it
+        if (currenttab.parent().hasClass('active')) {
+            accordionTabs.slideUp(300, 'easeOutExpo');
+            currenttab.parent().parent().find('.atitle').removeClass('active');
+        }
+        else if(!targetTab.hasClass('active'))  {
+            accordionTabs.slideUp(300, 'easeOutExpo');
+            targetTab.slideDown(300, 'easeOutExpo');
+            currenttab.parent().parent().find('.atitle').removeClass('active');
+            currenttab.parent().addClass('active');
+        }
+    });
+    
+    
+    /* === Toggle === */
+    $(".toggle > .ttitle > a").click(function(e) {
+        e.preventDefault();
+        
+        if($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass("active").closest('.toggle').find('.ttab').slideUp(300, 'easeOutExpo');
+        }
+        else {
+            $(this).parent().addClass("active").closest('.toggle').find('.ttab').slideDown(300, 'easeOutExpo');
+        }
+    });
+    
+    /* === Closes alert boxes e.g. warning, success etc. === */
+    $('.alert-box .close-btn').click(function(e) {
+        e.preventDefault();
+        $(this).parent().slideUp();
+    });
+    
+    
+    function loadTweets() {
+        jQuery(document).ready(function($) {
+            if($(".twitter-updates").length != 0) {
+                $.ajaxSetup({cache: true});
+                $.getJSON("twitter/get-twitter-feed.php", {"twitterid" : "themebakers", "numtweets" : 2}, function(data) {
+                    $(".twitter-updates").append("<ul></ul>");
+                    $.each(data, function(index, item) {
+                        $(".twitter-updates > ul").append('<li><span>' + item.text.linkify() + '</span><a href="http://twitter.com/themebakers/status/' + item.id_str + '>' + relative_time(item.created_at) + '</a></li>');
+                    });
+                });
+            }
+        });
+    }
+    
+    addLoadEvent(loadTweets);
+
+});
+
+} ) ( jQuery );
+</script>
+
+
+
+    <!-- For Syntax Highlighting -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    PR['registerLangHandler'](
+        PR['createSimpleLexer'](
+            [
+             // Whitespace is made up of spaces, tabs and newline characters.
+             [PR['PR_PLAIN'],       /^[ 
+    \r \xA0]+/, null, ' 
+    \r \xA0'],
+             // Not escaped as a string.  See note on minimalism above.
+             [PR['PR_PLAIN'],       /^(?:\"(?:[^\"\\]|\\[\s\S])*(?:\"|$)|\'(?:[^\'\\]|\\[\s\S])+(?:\'|$)|`[^`]*(?:`|$))/, null, '"\'']
+            ],
+            [
+             // Block comments are delimited by /* and */.
+             // Single-line comments begin with // and extend to the end of a line.
+             [PR['PR_COMMENT'],     /^(?:\/\/[^\r
+    ]*|\/\*[\s\S]*?\*\/)/],
+             [PR['PR_PLAIN'],       /^(?:[^\/\"\'`]|\/(?![\/\*]))+/i]
+            ]),
+        ['go']);
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-53561235-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+    <meta name="description" content="Alfonso Kim personal blog">
+    <meta name="author" content="Alfonso Kim">
+
+</head>
+<body class="blog">
+
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li class="profile"><a href="index.html"><span><span>Profile</span></span></a></li>
+                <li class="resume current-menu-item"><a href="resume.html"><span><span>Resume</span></span></a></li>
+                <!-- <li class="portfolio"><a href="portfolio.html"><span><span>Portfolio</span></span></a></li> -->
+                <li class="blog"><a href="http://blog.alfonso.kim"><span><span>Blog</span></span></a></li>
+                <li class="contact"><a href="contact.html"><span><span>Contact</span></span></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="info">
+                <div class="head">
+                    <img src="http://alfonso.kim/images/profile-image.png" alt="" />
+                    <div class="name">
+                        <p class="first">Alfonso</p>
+                        <p class="last">Kim</p>
+                        <p class="title">Performance &amp; scalability engineer</p>
+                    </div>
+                </div>
+            </div><!-- /profileInfo -->
+
+            <div class="topAddress hidden">
+                <address>
+                    <!--
+                    1111-A Nowhere Lane<br>
+                    Outta Sight, State 90378, USA
+                    <br>
+                    -->
+                    <a href="mailto:hexllxo@alxfoxnsxo.kxixm" onmouseover="this.href=this.href.replace(/x/g,'');">e-mail address</a>
+                    <br>
+                    <!--
+                    <a href="mailto:johnathandoe@gmail.com">johnathandoe@gmail.com</a>
+                    <a href="#">+0(31)6 89764536</a>
+                    <br> 
+                    -->
+                    Mexico City
+                </address>
+                <div class="social">
+                    <a href="https://github.com/alfonsokim/" target="_blank"><img src="http://alfonso.kim/images/social_icons/github_20.png" alt="GitHub" /></a>
+                    <a href="https://twitter.com/alfonsokim/" target="_blank"><img src="http://alfonso.kim/images/social_icons/twitter.png" alt="Twitter" /></a>
+                    <a href="http://mx.linkedin.com/in/alfonsokim/" target="_blank"><img src="http://alfonso.kim/images/social_icons/linkedin.png" alt="LinkedIn" /></a>
+                    <a href="http://blog.alfonso.kim/" target="_blank"><img src="http://alfonso.kim/images/social_icons/tumblr_20.png" alt="Tumblr" /></a>
+                </div>
+            </div><!-- /topAddress -->
+<!--
+  <header>
+    {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
+    <h1><a href="/">{Title}</a></h1>
+    {block:Description}
+        <p>{Description}</p>
+    {/block:Description}
+  </header>
+ -->
+        <br class="clear" />
+        
+        <div class="content wrap">
+            <section class="posts">
+                {block:NoSearchResults}
+                    <h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+                {/block:NoSearchResults}
+
+                {block:TagPage}
+                    <h2 class="h1">#{Tag}</h2>
+                {/block:TagPage}
+
+                {block:Posts}
+                    <article class="post {PostType}">
+                        {block:Text}
+                            {block:Title}
+                                <a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
+                            {/block:Title}
+                            
+                            {Body}
+                            
+                            {block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
+                            
+                        {/block:Text}
+
+                        {block:Photo}
+                            {LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
+                            {LinkCloseTag}
+
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        {/block:Photo}
+
+                        {block:Photoset}
+                            {Photoset}
+
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        {/block:Photoset}
+
+                        {block:Quote}
+                            <blockquote>
+                                <p class="h3">&ldquo;{Quote}&rdquo;</p>
+
+                                {block:Source}
+                                    <p class="source">&ndash; {Source}</p>
+                                {/block:Source}
+                            </blockquote>
+                        {/block:Quote}
+
+                        {block:Link}
+                            <h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
+
+                            {block:Description}
+                                {Description}
+                            {/block:Description}
+                        {/block:Link}
+
+                        {block:Chat}
+                            {block:Title}
+                                <h2>{Title}</h2>
+                            {/block:Title}
+
+                            <ul>
+                                {block:Lines}
+                                    <li class="{Alt}">
+                                        {block:Label}
+                                            <b>{Label}</b>
+                                        {/block:Label}
+
+                                        {Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                        {/block:Chat}
+
+                        {block:Audio}
+                            
+                          {AudioEmbed-640}
+                            
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        {/block:Audio}
+
+                        {block:Video}
+                            {Video-700}
+
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        {/block:Video}
+
+                        {block:Answer}
+                            <h2>{Asker} asked: <q>{Question}</q></h2>
+
+                            {Answer}
+                        {/block:Answer}
+
+                        {block:Date}
+                            <footer>
+                                <ul class="small">
+                                    <li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
+                                    {block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
+                                    {block:ContentSource}
+                                        <li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
+                                    {/block:ContentSource}
+                                </ul>
+                                
+                                {block:PermalinkPage}
+                    {block:HasTags}
+                                            <ul class="tags">
+                                                {block:Tags}
+                                                    <li>
+                                                        <a href="{TagURL}">#{Tag}</a>
+                                                    </li>
+                                                {/block:Tags}
+                                            </ul>
+                                    {/block:HasTags}            
+                                {/block:PermalinkPage}
+                                                            
+                            </footer>
+                        {/block:Date}
+                    </article> <!-- /post -->           
+                
+                {block:PostNotes}
+                  <aside class="notes">
+                      {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
+                        {PostNotes-64}
+                  </aside>
+                {/block:PostNotes}
+
+                {/block:Posts}
+                
+                {block:Pagination}
+                    <div class="pagination p">
+                        <span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
+                        <span class="page-numbers">{CurrentPage}/{TotalPages}</span>
+                        <span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
+                    </div>
+                {/block:Pagination}
+                            
+            </section> <!-- /posts -->
+        </div> <!-- /content -->
+
+
+        <footer>
+            <span>Copyright &copy;2017 Alfonso Kimhttp://static.tumblr.com/o2ktcze/p1qokise2/base.css</span>
+        </footer>
+
+    </div><!-- /wrapper -->
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
