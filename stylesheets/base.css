@@ -87,7 +87,7 @@
 code, samp, kbd {
     font-family: "Courier New", Courier, monospace, sans-serif;
     text-align: left;
-    color: #999999;
+    color: #666666;
 }
 pre code {
     font-size: 11px;
@@ -99,7 +99,7 @@ pre {
     margin: 1.7em 0 1.7em 0.3em;
     overflow: auto;
     line-height: 165%;
-    color: #999999;
+    color: #666666;
     font-size: 12px;
     white-space: pre-wrap;                 /* CSS3 browsers  */
     white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
@@ -120,7 +120,7 @@ pre {
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #999999; outline: 0; }
+	a, a:visited { color: #666666; outline: 0; }
     address a { text-decoration: none; }
 	a:hover, a:focus { color: #000; text-decoration: underline; }
 	p a, p a:visited { line-height: inherit; }
@@ -487,7 +487,7 @@ a.button {
 	label,
 	legend {
 		display: block;
-        color: #999999;
+        color: #666666;
         letter-spacing: -1px;
 		font-weight: bold;
 		font-size: 14px;  }

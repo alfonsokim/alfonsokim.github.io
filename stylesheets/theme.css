@@ -5,13 +5,13 @@
 .topAddress {
     text-align: right;
     font-size: 12px;
-    color: #999999;
+    color: #555555;
     line-height: 150%;
     padding-top: 20px;
     background: url('../images/shadow-address.jpg') no-repeat 0px 0px; }
 .desc {
     font-size: 13px;
-    color: #999999;
+    color: #555555;
     line-height: 150%; }
 
 /* #Navigation
@@ -82,24 +82,24 @@ nav li.links.current-menu-item a > span {
     font-weight: bold;
     letter-spacing: -1px; }
 .head .title {
-    color: #999999;
+    color: #666666;
     font-size: 16px;
     letter-spacing: -0.5px; }
 
 /* #Profile
 ================================================== */
 .profile .sidebar h6 {
-    color: #999999; }
+    color: #555555; }
 
 /* #Subnavigation */
 .subnavContainer {
     font-size: 13px;
-    color: #999999; }
+    color: #555555; }
 .subnavContainer div div {
     text-align: center; }
 .subnavContainer div div a {
     text-decoration: none;
-    color: #999999; }
+    color: #555555; }
 .subnavResume .invert {
     background: url('../images/invert-resume.png') no-repeat 0px 0px #cccccc; }
 .subnavResume:hover .invert {
@@ -159,7 +159,7 @@ nav li.links.current-menu-item a > span {
 .sidebar {
     text-align: right;
     font-size: 12px;
-    color: #999999;
+    color: #555555;
     line-height: 150%;
     background: url('../images/shadow-profile-sidebar.jpg') no-repeat 0px 0px; }
 .blog .sidebar {
@@ -176,7 +176,7 @@ nav li.links.current-menu-item a > span {
 .blog .sidebar .twitter-updates a {
     color: #cccccc; }
 .blog .sidebar .twitter-updates a:hover {
-    color: #999999; }
+    color: #555555; }
 .profile .sidebar address {
     font-style: normal; }
 .blog .sidebar .twitter-updates li {
@@ -188,14 +188,14 @@ nav li.links.current-menu-item a > span {
     font-size: 11px;
     text-decoration: none; }
 .twitter-updates a:hover {
-    color: #999999;
+    color: #555555;
     text-decoration: underline; }
 
 /* #Resume
 ================================================== */
 .personalDev {
     font-size: 13px;
-    color: #999999;
+    color: #555555;
     margin-bottom: 40px;}
 .personalDev li {
     border-top: 1px solid #e5e5e5; }
@@ -203,7 +203,7 @@ nav li.links.current-menu-item a > span {
     font-weight: bold; }
 .workExperience {
     font-size: 13px;
-    color: #999999;
+    color: #555555;
     margin-bottom: 40px;}
 .workExperience li {
     border-top: 1px solid #e5e5e5; }
@@ -218,7 +218,7 @@ nav li.links.current-menu-item a > span {
 
 .skills {
     font-size: 13px;
-    color: #999999; }
+    color: #666666; }
 .skills li {
     border-top: none; }
 .skills .skill {
@@ -254,7 +254,7 @@ nav li.links.current-menu-item a > span {
 	color:inherit;
 	text-decoration:none; }
 .portfolio-items .items li .desc {
-    color: #999999;
+    color: #666666;
     font-size: 12px; }
 .portfolio-items .items .image a:hover .image-wrapper .cover {
     background: url('../images/portfolio/hover-image.png') 0px 0px transparent; }
@@ -273,7 +273,7 @@ nav li.links.current-menu-item a > span {
     text-decoration: underline; }
 .blog .meta, .blog .meta a {
     font-size: 12px;
-    color: #999999; }
+    color: #666666; }
 .blog .meta img {
     width: auto;
     margin-right: 4px;
@@ -286,7 +286,7 @@ nav li.links.current-menu-item a > span {
 }
 .blog .commentContent p {
     font-size: 12px;
-    color: #999999;
+    color: #666666;
     line-height: 150%; }
 .blog .comments h6 {
     border-bottom: 1px solid #cccccc; }
@@ -295,7 +295,7 @@ nav li.links.current-menu-item a > span {
     display: inline-block; }
 .blog .comments .date {
     font-size: 11px;
-    color: #999999; }
+    color: #666666; }
 .blog .comments p {
     margin-bottom: 10px; }
 .blog .comments .comment-reply-link {
