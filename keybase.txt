@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/alfonsokim
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alfonso.kim
+  * I am alfonsokim (https://keybase.io/alfonsokim) on keybase.
+  * I have a public key with fingerprint D7BB 9335 8005 7A28 E4E7  1C0D 1D18 FEC4 E16E 835B
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101d5bc7a18ecb05c1a3d9723c47c2023833960005f2b74911f1ac48573f6869c780a",
+      "fingerprint": "d7bb933580057a28e4e71c0d1d18fec4e16e835b",
+      "host": "keybase.io",
+      "key_id": "1d18fec4e16e835b",
+      "kid": "0101d5bc7a18ecb05c1a3d9723c47c2023833960005f2b74911f1ac48573f6869c780a",
+      "uid": "0a66b941be0337e2d9a8ae3ea91e0e19",
+      "username": "alfonsokim"
+    },
+    "service": {
+      "hostname": "alfonso.kim",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1508117666,
+  "expire_in": 157680000,
+  "prev": "e440778ebda0d56bfbddb8ffcec4e45694ea9305a31d5e095cf7f3af259821e1",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMImAnicrZJbSBVBGMePmZpWqEQYgqhbRNpJZvY2u6foIUp9CQyCUsvjzO7scfN4
+9nj2aHlDiG5QXjDDSAUrIn3QfKgHQcgO+aIUYUVWFKYWPXQ1u5Fhs10egh57Guab
+3/8/3/fnu7ky2pUQ9SKl5PG3rOGiqPEbZ6tchbMrLtRxxNJrOE8dV05/HtSvUzvs
+LTd1zsMBCKAuEQ1hqFCNAEmDWNBVxAuaiDQe8IIiCKoMAJAMniBRhdCAWBMVCQmG
+rMiqhhSAOTdnmAEfDQVDZiDMbHVEiCoIksJ0CPMKFSmCGtChDhWDaiKFMlUEiTBh
+mWU7CtYcwTbNMS1WYxfvz/b+wf/nvqt+2WFZJqoICQWCgCivq1jBVKBYhRRQqDqg
+TUMBXEEZjf2GFbCtcrOCa3BzrF5tatSJ1pnlbybHgdxcMGSFLc3ys4eycDhoexxh
+uCbokAcp8f728BIzoLMgmaKahmzTCnAeyEgtbDqmUAIKhEiWZTdHDwXNEPWaDiEh
+mQUNgPMPrWaWVBQBQgolOga6JBOD6DpRDENzohQlWRXZZAKQsMBCpECVNAMZAjZ4
+SVV4SCHnTFUZsDiPyNrEPmZpm74ADleFKNcQGdm31BWV4IqNWeIsmCshPunP2p22
+l7k64o3Dexa3+ZqyhiZ3DKR29e7OLu1Rk1Lv9KZnjn05cC0vY0Jrj69tgM9fjxVc
+mEt7uHZDmhy7sXxLfYurtaW/D1UO5Nrpzx7k7XiSD6YH917Z9SHy7Pvyj++kofQh
+2w15vHOmprm+qPvYqemCqe62SVB6d1Pz4El/dFOccLWjsfd98uXq7GRUFhnvv2cu
+LmivThzvuzVzPe5S5GVPTuvj/rpR38R4wX7UPFUReZoUvf7N0c66Jc0ZxefPZB55
+NHx7e+XAhlXd9z+fy92ctVA8P5LyqbSws712hAS/PknsiqwebVNn8v2HSi5enEu8
+G/NoFi5Mzm/Fq9c03tvu198eWPcDDylEvA==
+=hwuZ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alfonsokim
+
+==================================================================
